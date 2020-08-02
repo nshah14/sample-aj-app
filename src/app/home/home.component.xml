@@ -1,0 +1,65 @@
+<!-- 
+<Tabs selectedIndex="1">
+
+      <TabStrip>
+        <TabStripItem>
+            <Label text="Home"></Label>
+            <Image src="font://&#xf015;" class="fas"></Image>
+        </TabStripItem>
+        <TabStripItem class="special">
+            <Label text="Parties"></Label>
+            <Image src="font://&#xf007;" class="fas"></Image>
+        </TabStripItem>
+        <TabStripItem class="special">
+            <Label text="Plan"></Label>
+            <Image src="font://&#xf00e;" class="fas"></Image>
+        </TabStripItem>
+    </TabStrip>
+
+    <TabContentItem>
+        <GridLayout>
+            <Label text="Home Page" class="h2 text-center"></Label>
+        </GridLayout>
+    </TabContentItem>
+    <TabContentItem>
+        <GridLayout>
+            <Label text="Account Page" class="h2 text-center"></Label>
+            <Button text="Account" [nsRouterLink]="['/account']" pageTransition="slide" clearHistory="true"></Button>
+        </GridLayout>
+    </TabContentItem>
+    <TabContentItem>
+        <GridLayout>
+            <Label text="Search this Page" class="h2 text-center"></Label>
+           <Button text="Browse" [nsRouterLink]="['/browse']" pageTransition="slide" clearHistory="true"></Button>
+         
+        </GridLayout>
+    </TabContentItem>
+
+</Tabs> -->
+<!-- <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Usage"></ActionBar>
+	</Page.actionBar> -->
+
+   <!-- <StackLayout class="m-15">
+       
+        <Button text="Tap me!" tap="onTap"></Button>
+       
+    </StackLayout> -->
+<!-- </Page> -->
+<FlexboxLayout class="page">
+    <GridLayout class="form" rows="*, *" columns="*, *" >
+        <StackLayout class="boring"  row="0" col="0"  orientation="vertical" >
+            <Button text="Home"  width="70%" height="70%" class="my-button" ></Button>
+        </StackLayout>
+        <StackLayout class="boring"   row="0" col="1"  rientation="vertical">
+            <Button align="center" fontsi text="Parties" width="70%" height="70%"  class="my-button"></Button>
+        </StackLayout>
+        <StackLayout class="boring"  row="1" col="0"  orientation="vertical">
+            <Button text="Account" [nsRouterLink]="['/account']" pageTransition="slide" width="70%" height="70%"  class="my-button"></Button>
+        </StackLayout >
+        <StackLayout class="boring"  row="1" col="1" orientation="vertical">
+            <Button text="Search" [nsRouterLink]="['/browse']" pageTransition="slide"  width="70%" height="70%" class="my-button"></Button>
+        </StackLayout>
+    </GridLayout>
+</FlexboxLayout>

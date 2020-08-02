@@ -1,0 +1,95 @@
+.date-picker {
+    background-color: olivedrab;
+    border-color: burlywood;
+    border-width: 2;
+    border-radius: 10;
+    color: whitesmoke;
+    vertical-align: middle;
+}
+.label{
+    border-width: 2;
+    border-radius: 10;
+    border-color: burlywood;
+    background-color: blueviolet;
+    text-align: center;
+    font-style: bold;
+    font-size: 14;
+    color: black;
+    height: 100%;
+    width: 40%;
+    /* padding: 12px 20px; */
+}
+
+.text{
+    border-width: 2;
+    border-radius: 10;
+    border-color: burlywood;
+    background-color: blueviolet;
+    color: whitesmoke;
+    font-style: bold;
+    height: 100%;
+    width: 60%;
+    cursor: default;
+    /* padding: 12px 20px; */
+    text-align: left;
+    box-sizing: border-box;
+    font-size: large;
+}
+.searchBar{
+    border-width: 2;
+    border-radius: 10;
+    border-color: burlywood;
+    background-color: blueviolet;
+    color: whitesmoke;
+    height: 100%;
+    width: 60%;
+    cursor: default;
+    /* padding: 12px 20px; */
+    text-align: left;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+.odd { 
+    vertical-align: center;
+    padding-left: 15;
+}
+
+.even {
+    color: #0099CC;
+    vertical-align: center;
+    padding-left: 15;
+}
+.form{
+        
+        /* border-color: black;
+        border-width: 10; */
+        
+    }
+
+    .forminner{
+        
+        /* border-color: blue;
+        border-width: 10; */
+        
+    }
+    .page{
+        
+        /* border-color: black;
+        border-width: 10; */
+        
+    }
+
+    .boring {
+        /* border-color: orange;
+        border-width: 5; */
+       
+        /* margin: 10; */
+       
+        /* marginRight
+      
+      marginLeft
+      horizontalAlignment
+      verticalAlignment */
+      
+      }

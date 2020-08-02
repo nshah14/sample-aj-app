@@ -1,0 +1,8 @@
+<ActionBar>
+    <Label text="Account"></Label>
+</ActionBar>
+
+<GridLayout>
+    <Label text="To Home Page" [nsRouterLink]="['/home']" pageTransition="slide" clearHistory="true"></Label>
+    
+</GridLayout>

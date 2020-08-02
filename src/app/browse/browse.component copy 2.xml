@@ -1,0 +1,46 @@
+<ScrollView>
+   <GridLayout class="form" rows="auto,*,*,*,*" columns="*">
+       <StackLayout class="boring" row="0" col="0" backgroundColor="lightgray" orientation="vertical" width="100%" height="100%"  >
+            <GridLayout class="forminner" rows="*,*,*" columns="*">
+                <StackLayout class="boring" row="0" col="0" backgroundColor="lightgray" orientation="horizontal" height="100%"  >
+                    <Label class="label" text="Name of Child" height="100%"  ></Label>
+                    <TextField class="text" hint="Child Name" height="100%" ></TextField>
+                </StackLayout>
+                <StackLayout class="boring" row="1" col="0" backgroundColor="lightgray" orientation="horizontal" height="100%"  >
+                    <Label class="label" text="Party Location" height="100%" ></Label>
+                    <ListView [items]="items" (itemTap)="onItemTap($event)" class="list-group">
+                        <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+                            <GridLayout>
+                                <Label [text]="item.name" class="list-group-item"></Label>
+                            </GridLayout>
+                        </ng-template>
+                    </ListView>
+                    <!-- <SearchBar class="searchBar" hint="Enter search term here ..." [text]="searchPhrase" (textChange)="onChange($event)" (clear)="onClear($event)" (submit)="onSubmit($event)"></SearchBar> -->
+                </StackLayout>
+                <StackLayout class="boring" row="2" col="0" backgroundColor="lightgray" orientation="horizontal" height="100%"  >
+                    <Label class="label" text="Party Theme"  height="100%"></Label>
+                    <TextField class="text" hint="Party Location"  height="100%"></TextField>
+                    
+                </StackLayout>
+                <!-- <StackLayout class="boring" row="0" col="1" backgroundColor="lightgray" orientation="vertical" height="100%"  >
+                    <TextField hint="Child Name" height="30%" ></TextField>
+                    <TextField hint="Party Location" height="30%" ></TextField>
+                    <TextField hint="Party Location"  height="30%"></TextField>
+                    
+                </StackLayout> -->
+            </GridLayout>
+       </StackLayout>
+       <StackLayout class="boring" row="1" col="0" backgroundColor="lightgray" orientation="vertical" height="50%"  >
+            <Button text="Select Date"   (tap)="onTapDate($event)" pageTransition="slide" clearHistory="true"></Button>
+            <DatePicker *ngIf="showDatePicker" year="1980" month="4" day="20" loaded="onDatePickerLoaded" date="{{ date }}" minDate="{{ minDate }}" maxDate="{{ maxDate }}"></DatePicker>
+       </StackLayout>
+       <StackLayout class="boring" row="2" col="0" backgroundColor="lightgray" orientation="vertical" height="50%"  >
+            <Button text="Select Time"   (tap)="onTapTime($event)" pageTransition="slide" clearHistory="true"></Button>
+            <TimePicker hour="10" minute="25" *ngIf="showTimePicker"  loaded="onPickerLoaded"  row="2" col="0" colSpan="2"  class="m-15" verticalAlignment="center"></TimePicker>
+       </StackLayout>
+       <StackLayout class="boring" row="3" col="0" backgroundColor="lightgray" orientation="vertical" height="50%"  >
+          <Button text="Add Guest" [nsRouterLink]="['/account']" pageTransition="slide" clearHistory="true"></Button>
+       </StackLayout>
+  </GridLayout>
+</ScrollView>
+

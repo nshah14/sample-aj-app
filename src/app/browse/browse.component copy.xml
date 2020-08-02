@@ -1,0 +1,75 @@
+<!-- <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"></ActionBar>
+	</Page.actionBar> -->
+   
+
+<!-- <FlexboxLayout class="page"> -->
+    <GridLayout class="form"  columns="*,*" rows="*,*" width="300" >
+    <StackLayout class="boring" width="500" backgroundColor="lightgray" >
+        <StackLayout class="input-field" orientation="horizontal" >
+             <Label text="Name of Child"  ></Label>
+             <TextField hint="Child Name"  ></TextField>
+        </StackLayout>
+
+        <StackLayout class="input-field" orientation="horizontal">
+              <Label text="Party Location" width="250" height="100" ></Label>
+              <SearchBar hint="Enter search term here ..."
+            [text]="searchPhrase" (textChange)="onChange($event)" 
+            (clear)="onClear($event)" (submit)="onSubmit($event)">
+           </SearchBar>
+           
+            <!-- <SearchBar id="searchBar"  backgroundColor="lightgray"  width="250" height="100" hint="Enter search term here ..." text="{{sbText}}" clear="onClear" submit="onSubmit"></SearchBar> -->
+        </StackLayout>
+
+        <StackLayout *ngIf="!isLoggingIn" class="input-field" orientation="horizontal">
+             <Label text="Party Theme"     width="250" height="100"></Label>
+             <TextField hint="Theme of the party"  width="250" height="100"></TextField>
+        </StackLayout>
+<StackLayout  class="input-field" orientation="horizontal">
+        <Label row="0" text="Binding the ListView items property to collection" textWrap="true"></Label>
+        <Button row="1" text="Add invities" (tap)="onTap($event)" ></Button>
+        <ListView items="{{ myTitles }}" 
+                  itemTap="onItemTap" 
+                  loaded="{{ onListViewLoaded }}" 
+                  separatorColor="orangered" rowHeight="50"
+                  class="list-group" id="listView"  row="2">
+			<ListView.itemTemplate>
+				<!-- The item template can only have a single root view container (e.g. GriLayout, StackLayout, etc.) -->
+				<StackLayout class="list-group-item">
+					<Label text="{{ title || 'Downloading...' }}" textWrap="true" class="title"></Label>
+				</StackLayout>
+			</ListView.itemTemplate>
+		</ListView>  
+
+</StackLayout>
+        <StackLayout>
+            <Button text="Select Date"   (tap)="onTapDate($event)" pageTransition="slide" clearHistory="true"></Button>
+            <Button text="Select Time"   (tap)="onTapTime($event)" pageTransition="slide" clearHistory="true"></Button>
+            <DatePicker *ngIf="showDatePicker" year="1980" month="4" day="20" loaded="onDatePickerLoaded" date="{{ date }}" minDate="{{ minDate }}" maxDate="{{ maxDate }}"></DatePicker>
+             <TimePicker hour="10" minute="25" *ngIf="showTimePicker" 
+            loaded="onPickerLoaded" 
+            row="2" col="0" colSpan="2" 
+            class="m-15" verticalAlignment="center">
+</TimePicker>
+        </StackLayout>
+        
+         <Button text="Account" [nsRouterLink]="['/account']" pageTransition="slide" clearHistory="true"></Button>
+
+        <!-- <Button [text]="isLoggingIn ? 'Log In' : 'Sign Up'" (tap)="submit()"></Button> -->
+        <!-- <Button text="Home" row="7"  [nsRouterLink]="['/home']" pageTransition="slide" clearHistory="true"> -->
+        <!-- </Button> -->
+        <!-- <Label *ngIf="isLoggingIn" text="Forgot your password?"></Label> -->
+        </StackLayout>
+    <!-- <StackLayout>
+        <Label (tap)="toggleForm()">
+            <FormattedString>
+            <Span [text]="isLoggingIn ? 'Don’t have an account? ' : 'Back to Login'"></Span>
+            <Span [text]="isLoggingIn ? 'Sign up' : ''" class="bold"></Span>
+            </FormattedString>
+        </Label>
+    </StackLayout> -->
+    </GridLayout>
+<!-- </FlexboxLayout> -->
+<!-- </Page> -->
+

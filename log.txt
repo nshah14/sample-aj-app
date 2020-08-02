@@ -1,0 +1,472 @@
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*                                                                                                                                               *
+*  The "TRACE" log level might print some sensitive data like secrets or access tokens in request URLs. Be careful when you share this output.  *
+*                                                                                                                                               *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+
+Trying to get macOS version.
+Exec system_profiler SPSoftwareDataType -detailLevel mini 
+ stdout: Software:
+
+    System Software Overview:
+
+      System Version: macOS 10.14.6 (18G103)
+      Kernel Version: Darwin 18.7.0
+      Time since boot: 19 days 4:16
+
+ 
+ stderr: 
+macOS version based on system_profiler is 10.14.
+Looking for project in '/Users/navedshah/Documents/Angular-ios-app/HelloWorld'
+Project directory is '/Users/navedshah/Documents/Angular-ios-app/HelloWorld'.
+Loading extensions.
+System information:
+{
+  "platform": "darwin",
+  "shell": "/bin/bash",
+  "os": "Darwin Naveds-MBP 18.7.0 Darwin Kernel Version 18.7.0: Tue Aug 20 16:57:14 PDT 2019; root:xnu-4903.271.2~2/RELEASE_X86_64 x86_64\n",
+  "procArch": "x64",
+  "nodeVer": "12.16.1",
+  "npmVer": "6.13.4",
+  "nodeGypVer": null,
+  "nativeScriptCliVersion": "6.7.8",
+  "gitVer": "2.21.1 (Apple Git-122.3)",
+  "dotNetVer": null,
+  "javacVersion": "1.8.0_252",
+  "javaVersion": "1.8.0_252",
+  "javaPath": "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/bin/java",
+  "adbVer": "1.0.41",
+  "androidInstalled": true,
+  "monoVer": null,
+  "gradleVer": null,
+  "isAndroidSdkConfiguredCorrectly": true,
+  "xcodeVer": "11.3.1",
+  "xcodeprojLocation": "/usr/local/bin/xcodeproj",
+  "itunesInstalled": true,
+  "cocoaPodsVer": "1.9.3",
+  "isCocoaPodsWorkingCorrectly": true,
+  "isCocoaPodsUpdateRequired": false,
+  "pythonInfo": {
+    "isInstalled": true,
+    "isSixPackageInstalled": true
+  }
+}
+Current CLI version:  6.7.8
+Project dir from hooksArgs is: undefined.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+BeforeHookName for command resolveCommand is before-resolveCommand
+Project dir from hooksArgs is: undefined.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+AfterHookName for command resolveCommand is after-resolveCommand
+Trying to handle SIGINT event. CLI overrides this behavior and does not allow handling SIGINT as this causes issues with Ctrl + C in terminal.
+The stackTrace of the location trying to handle SIGINT is:
+    at process.on (/usr/local/lib/node_modules/nativescript/lib/nativescript-cli.js:24:28)
+    at /usr/local/lib/node_modules/nativescript/node_modules/signal-exit/index.js:122:15
+    at Array.filter (<anonymous>)
+    at load (/usr/local/lib/node_modules/nativescript/node_modules/signal-exit/index.js:120:21)
+    at module.exports (/usr/local/lib/node_modules/nativescript/node_modules/signal-exit/index.js:35:5)
+    at Object.<anonymous> (/usr/local/lib/node_modules/nativescript/node_modules/proper-lockfile/lib/lockfile.js:296:1)
+    at Module._compile (internal/modules/cjs/loader.js:1158:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
+    at Module.load (internal/modules/cjs/loader.js:1002:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
+    at Module.require (internal/modules/cjs/loader.js:1044:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at Object.<anonymous> (/usr/local/lib/node_modules/nativescript/node_modules/proper-lockfile/index.js:3:18)
+    at Module._compile (internal/modules/cjs/loader.js:1158:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
+    at Module.load (internal/modules/cjs/loader.js:1002:32)
+spawn: /usr/local/bin/node "/usr/local/lib/node_modules/nativescript/lib/detached-processes/cleanup-process.js" "/usr/local/lib/node_modules/nativescript/lib/bootstrap.js"
+Shasum of file /Users/navedshah/Documents/Angular-ios-app/HelloWorld/package.json is f73a74296c43334fe8fde39c3e66b4b7d7731cbc
+Got cached result for shouldMigrate for platform: iOS
+Project dir from hooksArgs is: /Users/navedshah/Documents/Angular-ios-app/HelloWorld.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+BeforeHookName for command checkEnvironment is before-checkEnvironment
+Initializing analytics statuses.
+Analytics statuses:  { TrackFeatureUsage: 'enabled', TrackExceptions: 'enabled' }
+Will send the following information to Google Analytics: {
+  type: 'googleAnalyticsData',
+  category: 'CLI',
+  googleAnalyticsDataType: 'event',
+  action: 'Check Local Build Setup',
+  label: 'Starting',
+  customDimensions: { cd2: 'Angular', cd9: 'false', cd5: 'Unknown' },
+  value: undefined
+}
+spawn: /usr/local/bin/node "/usr/local/lib/node_modules/nativescript/lib/services/analytics/analytics-broker-process.js" "/usr/local/lib/node_modules/nativescript/lib/bootstrap.js"
+getInfos cacheConfig options: { forceCheck: undefined }  current info from cache:  [
+  {
+    message: 'Xcode is installed and is configured properly.',
+    platforms: [ 'iOS' ],
+    type: 'info'
+  },
+  {
+    message: 'xcodeproj is installed and is configured properly.',
+    platforms: [ 'iOS' ],
+    type: 'info'
+  },
+  {
+    message: 'CocoaPods are installed.',
+    platforms: [ 'iOS' ],
+    type: 'info'
+  },
+  {
+    message: 'CocoaPods update is not required.',
+    platforms: [ 'iOS' ],
+    type: 'info'
+  },
+  {
+    message: 'CocoaPods are configured properly.',
+    platforms: [ 'iOS' ],
+    type: 'info'
+  },
+  {
+    message: 'Your current CocoaPods version is newer than 1.0.0.',
+    platforms: [ 'iOS' ],
+    type: 'info'
+  },
+  {
+    message: 'Python installed and configured correctly.',
+    platforms: [ 'iOS' ],
+    type: 'info'
+  },
+  {
+    message: "The Python 'six' package is found.",
+    platforms: [ 'iOS' ],
+    type: 'info'
+  },
+  {
+    message: 'Xcode version 11.3.1 satisfies minimum required version 10.',
+    platforms: [ 'iOS' ],
+    type: 'info'
+  }
+]
+Xcode is installed and is configured properly.
+xcodeproj is installed and is configured properly.
+CocoaPods are installed.
+CocoaPods update is not required.
+CocoaPods are configured properly.
+Your current CocoaPods version is newer than 1.0.0.
+Python installed and configured correctly.
+The Python 'six' package is found.
+Xcode version 11.3.1 satisfies minimum required version 10.
+Will send the following information to Google Analytics: {
+  type: 'googleAnalyticsData',
+  category: 'CLI',
+  googleAnalyticsDataType: 'event',
+  action: 'Check Local Build Setup',
+  label: 'Finished: Is setup correct: true',
+  customDimensions: { cd2: 'Angular', cd9: 'false', cd5: 'Unknown' },
+  value: undefined
+}
+Project dir from hooksArgs is: /Users/navedshah/Documents/Angular-ios-app/HelloWorld.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+AfterHookName for command checkEnvironment is after-checkEnvironment
+Validate options for platform: iOS
+Will send the following information to Google Analytics: {
+  type: 'googleAnalyticsData',
+  category: 'CLI',
+  googleAnalyticsDataType: 'pageview',
+  path: 'run ios',
+  title: 'run ios',
+  customDimensions: { cd5: 'Unknown', cd2: 'Angular', cd9: 'false' }
+}
+Will send the following information to Google Analytics: {
+  type: 'googleAnalyticsData',
+  category: 'CLI',
+  googleAnalyticsDataType: 'event',
+  action: 'Options',
+  label: '{"log":"trace","$0":"tns","bundle":"webpack","profileDir":"private"}',
+  customDimensions: { cd2: 'Angular', cd9: 'false', cd5: 'Unknown' },
+  value: undefined
+}
+Will send the following information to Google Analytics: {
+  type: 'PreviewAppData',
+  category: 'CLI',
+  googleAnalyticsDataType: 'event',
+  action: 'Preview App Data',
+  platform: 'iOS',
+  label: 'iOS',
+  customDimensions: { cd2: 'Angular', cd9: 'false', cd5: 'Unknown' }
+}
+Searching for devices...
+startLookingForDevices; platform is iOS
+Options for ios-device-discovery {
+  platform: 'iOS',
+  shouldReturnImmediateResult: false,
+  emulator: false,
+  fullDiscovery: undefined
+}
+Starting to look for iOS devices.
+Found device with identifier '6B894F77-1969-4059-9009-EC62027232F9'
+startLookingForDevices; platform is iOS
+Options for ios-device-discovery {
+  platform: 'iOS',
+  shouldReturnImmediateResult: false,
+  emulator: false,
+  fullDiscovery: undefined
+}
+Will send the following information to Google Analytics: {
+  type: 'googleAnalyticsData',
+  category: 'CLI',
+  googleAnalyticsDataType: 'event',
+  action: 'Using Runtime Version',
+  label: 'ios__6.5.0',
+  customDimensions: { cd2: 'Angular', cd9: 'false', cd5: 'Unknown' },
+  value: undefined
+}
+Project dir from hooksArgs is: /Users/navedshah/Documents/Angular-ios-app/HelloWorld.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+BeforeHookName for command prepare is before-prepare
+Preparing project...
+Project dir from hooksArgs is: /Users/navedshah/Documents/Angular-ios-app/HelloWorld.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+BeforeHookName for command watch is before-watch
+spawn: /usr/local/bin/node "--max_old_space_size=4096" "--preserve-symlinks" "/Users/navedshah/Documents/Angular-ios-app/HelloWorld/node_modules/webpack/bin/webpack.js" "--config=/Users/navedshah/Documents/Angular-ios-app/HelloWorld/webpack.config.js" "--env.hmr" "--env.ios" "--env.appPath=src" "--env.appResourcesPath=App_Resources" "--env.verbose" "--env.sourceMap" "--watch"
+Will send the following information to Google Analytics: {
+  type: 'googleAnalyticsData',
+  category: 'CLI',
+  googleAnalyticsDataType: 'event',
+  action: 'Performance',
+  label: 'WebpackCompilerService__startWebpackProcess',
+  customDimensions: { cd2: 'Angular', cd9: 'false', cd5: 'Unknown' },
+  value: 4
+}
+File change detected. Starting incremental webpack compilation...
+Message from webpack File change detected. Starting incremental webpack compilation...
+
+webpack is watching the files…
+
+Hash: 481f31423599862d3541
+Version: webpack 4.27.1
+Time: 5462ms
+Built at: 07/22/2020 15:38:32
+                                            Asset       Size                                          Chunks             Chunk Names
+                                             0.js   27.8 KiB                                               0  [emitted]  
+                                             1.js   8.43 KiB                                               1  [emitted]  
+                                             2.js   11.8 KiB                                               2  [emitted]  
+                                        bundle.js   17.3 KiB                                          bundle  [emitted]  bundle
+                                     package.json  112 bytes                                                  [emitted]  
+                                       runtime.js     73 KiB                                         runtime  [emitted]  runtime
+tns_modules/tns-core-modules/inspector_modules.js  666 bytes  tns_modules/tns-core-modules/inspector_modules  [emitted]  tns_modules/tns-core-modules/inspector_modules
+                                        vendor.js   16.4 MiB                                          vendor  [emitted]  vendor
+Entrypoint bundle = runtime.js vendor.js bundle.js
+Entrypoint tns_modules/tns-core-modules/inspector_modules = runtime.js vendor.js tns_modules/tns-core-modules/inspector_modules.js
+[../$$_lazy_route_resource lazy recursive] ../$$_lazy_route_resource lazy namespace object 160 bytes {bundle} [built]
+[./app.css] 1.18 KiB {bundle} [built]
+[./app/account/account-routing.module.ts] 620 bytes {1} [built]
+[./app/account/account.component.ts] 600 bytes {1} [built]
+[./app/account/account.module.ts] 746 bytes {1} [built]
+[./app/app-routing.module.ts] 984 bytes {bundle} [built]
+[./app/app.component.html] 62 bytes {bundle} [built]
+[./app/app.component.ts] 354 bytes {bundle} [built]
+[./app/app.module.ts] 768 bytes {bundle} [built]
+[./app/browse/browse-routing.module.ts] 611 bytes {0} [built]
+[./app/browse/browse.component.ts] 3.72 KiB {0} [built]
+[./app/browse/browse.module.ts] 734 bytes {0} [built]
+[./app/home/home-routing.module.ts] 593 bytes {2} [built]
+[./app/home/home.module.ts] 710 bytes {2} [built]
+[./main.ts] 1.57 KiB {bundle} [built]
+    + 619 hidden modules
+Webpack compilation complete. Watching for file changes.
+Message from webpack Webpack compilation complete.
+Webpack build done!
+Message from webpack {
+  emittedFiles: [
+    '0.js',
+    '1.js',
+    '2.js',
+    'bundle.js',
+    'runtime.js',
+    'tns_modules/tns-core-modules/inspector_modules.js',
+    'vendor.js',
+    'package.json'
+  ],
+  chunkFiles: [
+    '0.js',
+    '1.js',
+    '2.js',
+    'bundle.js',
+    'runtime.js',
+    'tns_modules/tns-core-modules/inspector_modules.js',
+    'vendor.js'
+  ],
+  hash: '481f31423599862d3541'
+}
+Project dir from hooksArgs is: /Users/navedshah/Documents/Angular-ios-app/HelloWorld.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+BeforeHookName for command watchPatterns is before-watchPatterns
+Project dir from hooksArgs is: /Users/navedshah/Documents/Angular-ios-app/HelloWorld.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+AfterHookName for command watchPatterns is after-watchPatterns
+Project dir from hooksArgs is: /Users/navedshah/Documents/Angular-ios-app/HelloWorld.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+BeforeHookName for command prepareNativeApp is before-prepareNativeApp
+Project dir from hooksArgs is: /Users/navedshah/Documents/Angular-ios-app/HelloWorld.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+BeforeHookName for command checkForChanges is before-checkForChanges
+Executing before-checkForChanges hook at location /Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks/before-checkForChanges/nativescript-core.js in-process
+Validating before-checkForChanges arguments.
+Executing before-checkForChanges hook at location /Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks/before-checkForChanges/nativescript-dev-webpack.js in-process
+Validating before-checkForChanges arguments.
+Will send the following information to Google Analytics: {
+  type: 'googleAnalyticsData',
+  category: 'CLI',
+  googleAnalyticsDataType: 'event',
+  action: 'Performance',
+  label: 'before-checkForChanges__nativescript-core.js',
+  customDimensions: { cd2: 'Angular', cd9: 'false', cd5: 'Unknown' },
+  value: 6
+}
+Will send the following information to Google Analytics: {
+  type: 'googleAnalyticsData',
+  category: 'CLI',
+  googleAnalyticsDataType: 'event',
+  action: 'Performance',
+  label: 'before-checkForChanges__nativescript-dev-webpack.js',
+  customDimensions: { cd2: 'Angular', cd9: 'false', cd5: 'Unknown' },
+  value: 13
+}
+containsNewerFiles will check /Users/navedshah/Documents/Angular-ios-app/HelloWorld/App_Resources/iOS
+containsNewerFiles will check /Users/navedshah/Documents/Angular-ios-app/HelloWorld/App_Resources/iOS/Assets.xcassets
+containsNewerFiles will check /Users/navedshah/Documents/Angular-ios-app/HelloWorld/App_Resources/iOS/Assets.xcassets/AppIcon.appiconset
+containsNewerFiles will check /Users/navedshah/Documents/Angular-ios-app/HelloWorld/App_Resources/iOS/Assets.xcassets/LaunchScreen.AspectFill.imageset
+containsNewerFiles will check /Users/navedshah/Documents/Angular-ios-app/HelloWorld/App_Resources/iOS/Assets.xcassets/LaunchScreen.Center.imageset
+containsNewerFiles will check /Users/navedshah/Documents/Angular-ios-app/HelloWorld/node_modules/@nativescript/core/platforms/ios
+containsNewerFiles will check /Users/navedshah/Documents/Angular-ios-app/HelloWorld/node_modules/@nativescript/core/platforms/ios/src
+containsNewerFiles will check /Users/navedshah/Documents/Angular-ios-app/HelloWorld/node_modules/@nativescript/core/platforms/ios/typings
+containsNewerFiles will check /Users/navedshah/Documents/Angular-ios-app/HelloWorld/node_modules/tns-core-modules-widgets/platforms/ios
+containsNewerFiles will check /Users/navedshah/Documents/Angular-ios-app/HelloWorld/node_modules/tns-core-modules-widgets/platforms/ios/TNSWidgets.framework
+containsNewerFiles will check /Users/navedshah/Documents/Angular-ios-app/HelloWorld/node_modules/tns-core-modules-widgets/platforms/ios/TNSWidgets.framework/Headers
+containsNewerFiles will check /Users/navedshah/Documents/Angular-ios-app/HelloWorld/node_modules/tns-core-modules-widgets/platforms/ios/TNSWidgets.framework/Modules
+Set nativeChanged to false.
+Set value of configChanged to false
+checkForChanges returns ProjectChangesInfo {
+  appResourcesChanged: false,
+  nativeChanged: false,
+  nsConfigChanged: false,
+  configChanged: false,
+  nativePlatformStatus: '3'
+}
+Project dir from hooksArgs is: /Users/navedshah/Documents/Angular-ios-app/HelloWorld.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+AfterHookName for command checkForChanges is after-checkForChanges
+Project dir from hooksArgs is: /Users/navedshah/Documents/Angular-ios-app/HelloWorld.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+AfterHookName for command prepareNativeApp is after-prepareNativeApp
+Will send the following information to Google Analytics: {
+  type: 'googleAnalyticsData',
+  category: 'CLI',
+  googleAnalyticsDataType: 'event',
+  action: 'Performance',
+  label: 'PrepareNativePlatformService__prepareNativePlatform',
+  customDimensions: { cd2: 'Angular', cd9: 'false', cd5: 'Unknown' },
+  value: 77
+}
+Project dir from hooksArgs is: /Users/navedshah/Documents/Angular-ios-app/HelloWorld.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+AfterHookName for command watch is after-watch
+Project successfully prepared (ios)
+Project dir from hooksArgs is: /Users/navedshah/Documents/Angular-ios-app/HelloWorld.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+AfterHookName for command prepare is after-prepare
+Executing after-prepare hook at location /Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks/after-prepare/nativescript-dev-webpack.js in-process
+Validating after-prepare arguments.
+Will send the following information to Google Analytics: {
+  type: 'googleAnalyticsData',
+  category: 'CLI',
+  googleAnalyticsDataType: 'event',
+  action: 'Performance',
+  label: 'after-prepare__nativescript-dev-webpack.js',
+  customDimensions: { cd2: 'Angular', cd9: 'false', cd5: 'Unknown' },
+  value: 160
+}
+Will send the following information to Google Analytics: {
+  type: 'googleAnalyticsData',
+  category: 'CLI',
+  googleAnalyticsDataType: 'event',
+  action: 'Performance',
+  label: 'PrepareController__prepareCore',
+  customDimensions: { cd2: 'Angular', cd9: 'false', cd5: 'Unknown' },
+  value: 8227
+}
+Building project...
+Will send the following information to Google Analytics: {
+  type: 'googleAnalyticsData',
+  category: 'CLI',
+  googleAnalyticsDataType: 'event',
+  action: 'Build',
+  label: 'iOS_Simulator_Debug_Incremental',
+  customDimensions: { cd2: 'Angular', cd9: 'false', cd5: 'Unknown' },
+  value: undefined
+}
+Project dir from hooksArgs is: /Users/navedshah/Documents/Angular-ios-app/HelloWorld.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+BeforeHookName for command buildIOS is before-buildIOS
+Xcode build...
+spawn: xcodebuild "ONLY_ACTIVE_ARCH=NO" "CODE_SIGN_IDENTITY=" "build" "-configuration" "Debug" "-sdk" "iphonesimulator" "BUILD_DIR=/Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/build" "SHARED_PRECOMPS_DIR=/Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/build/sharedpch" "-workspace" "/Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/HelloWorld.xcworkspace" "-scheme" "HelloWorld"
+Build settings from command line:
+    BUILD_DIR = /Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/build
+    CODE_SIGN_IDENTITY = 
+    ONLY_ACTIVE_ARCH = NO
+    SDKROOT = iphonesimulator13.2
+    SHARED_PRECOMPS_DIR = /Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/build/sharedpch
+
+note: Using new build system
+note: Planning build
+note: Constructing build description
+ProcessInfoPlistFile /Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/build/Debug-iphonesimulator/MDFInternationalization/MDFInternationalization.framework/Info.plist /Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/Pods/Target\ Support\ Files/MDFInternationalization/MDFInternationalization-Info.plist (in target 'MDFInternationalization' from project 'Pods')
+    cd /Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/Pods
+    builtin-infoPlistUtility /Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/Pods/Target\ Support\ Files/MDFInternationalization/MDFInternationalization-Info.plist -producttype com.apple.product-type.framework -expandbuildsettings -format binary -platform iphonesimulator -o /Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/build/Debug-iphonesimulator/MDFInternationalization/MDFInternationalization.framework/Info.plist
+
+CodeSign /Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/build/Debug-iphonesimulator/MDFInternationalization/MDFInternationalization.framework (in target 'MDFInternationalization' from project 'Pods')
+    cd /Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/Pods
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --timestamp=none /Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/build/Debug-iphonesimulator/MDFInternationalization/MDFInternationalization.framework
+/Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/build/Debug-iphonesimulator/MDFInternationalization/MDFInternationalization.framework: replacing existing signature
+/Users/navedshah/Documents/Angular-ios-app/HelloWorld/platforms/ios/build/Debug-iphonesimulator/MDFInternationalization/MDFInternationalization.framework: resource fork, Finder information, or similar detritus not allowed
+Command CodeSign failed with a nonzero exit code
+
+warning: Capabilities for Signing & Capabilities may not function correctly because its entitlements use a placeholder team ID. To resolve this, select a development team in the HelloWorld editor. (in target 'HelloWorld' from project 'HelloWorld')
+Command xcodebuild failed with exit code 65
+Unable to apply changes on device: 6B894F77-1969-4059-9009-EC62027232F9. Error is: Command xcodebuild failed with exit code 65.
+Will emit event runOnDeviceError with data {
+  projectDir: '/Users/navedshah/Documents/Angular-ios-app/HelloWorld',
+  deviceIdentifier: '6B894F77-1969-4059-9009-EC62027232F9',
+  applicationIdentifier: 'org.nativescript.HelloWorld',
+  error: Error: Command xcodebuild failed with exit code 65
+      at Errors.failWithOptions (/usr/local/lib/node_modules/nativescript/lib/common/errors.js:147:28)
+      at Errors.fail (/usr/local/lib/node_modules/nativescript/lib/common/errors.js:120:21)
+      at XcodebuildCommandService.<anonymous> (/usr/local/lib/node_modules/nativescript/lib/services/ios/xcodebuild-command-service.js:28:30)
+      at Generator.throw (<anonymous>)
+      at rejected (/usr/local/lib/node_modules/nativescript/lib/services/ios/xcodebuild-command-service.js:5:65)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    name: 'Exception',
+    message: 'Command xcodebuild failed with exit code 65',
+    stack: 'Error: Command xcodebuild failed with exit code 65\n' +
+      '    at Errors.failWithOptions (/usr/local/lib/node_modules/nativescript/lib/common/errors.js:147:28)\n' +
+      '    at Errors.fail (/usr/local/lib/node_modules/nativescript/lib/common/errors.js:120:21)\n' +
+      '    at XcodebuildCommandService.<anonymous> (/usr/local/lib/node_modules/nativescript/lib/services/ios/xcodebuild-command-service.js:28:30)\n' +
+      '    at Generator.throw (<anonymous>)\n' +
+      '    at rejected (/usr/local/lib/node_modules/nativescript/lib/services/ios/xcodebuild-command-service.js:5:65)\n' +
+      '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+    errorCode: 127,
+    suggestCommandHelp: false,
+    proxyAuthenticationRequired: false,
+    printOnStdout: undefined
+  }
+}
+Stopping webpack watch for platform ios.
+Project dir from hooksArgs is: /Users/navedshah/Documents/Angular-ios-app/HelloWorld.
+Hooks directories: [ '/Users/navedshah/Documents/Angular-ios-app/HelloWorld/hooks' ]
+AfterHookName for command watch is after-watch
+Will emit event runOnDeviceStopped with data {
+  projectDir: '/Users/navedshah/Documents/Angular-ios-app/HelloWorld',
+  deviceIdentifier: '6B894F77-1969-4059-9009-EC62027232F9'
+}
+Webpack process exited with code null when we expected it to be long living with watch.

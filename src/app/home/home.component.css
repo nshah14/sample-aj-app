@@ -1,0 +1,44 @@
+
+
+.boring {
+  border-color: orange;
+  border-width: 5;
+  horizontal-align: center;
+  vertical-align: center;
+  /* margin: 10; */
+ 
+  /* marginRight
+
+marginLeft
+horizontalAlignment
+verticalAlignment */
+
+}
+.form{
+/*     
+    border-color: black;
+    border-width: 10; */
+    
+}
+
+.my-button {
+    android-elevation: 4;
+    background-color: lightseagreen;
+    border-color: darkolivegreen;
+    border-radius: 80;
+    border-width: 2;
+    color: whitesmoke;
+    font-size: 18;
+    font-weight: bold;
+}
+
+.my-button:active {
+    android-elevation: 8;
+    background-color: whitesmoke;
+    border-color: darkolivegreen;
+    border-radius: 100;
+    border-width: 1;
+    color: lightseagreen;
+    font-size: 18;
+    font-weight: bold;
+}
