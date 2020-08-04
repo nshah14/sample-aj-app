@@ -8,6 +8,8 @@ import { Page } from "tns-core-modules/ui/page";
 // import { ItemService, Item } from "./browse.service";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { TokenModel, AutoCompleteCompletionMode, AutoCompleteDisplayMode, AutoCompleteSuggestMode } from "nativescript-ui-autocomplete";
+import { VenueService, Venue } from "./browse.venue.service";
+import { NativeScriptCommonModule } from "nativescript-angular/common";
 
 @Component({
     selector: "Browse",
@@ -21,31 +23,30 @@ export class BrowseComponent implements OnInit {
     public showTimePicker: boolean = false;
     public searchPhrase: string;
     public showVenuesCount: number = 1;
+    public  isBeingFiltered: boolean = false;
     // items: Array<Item>;
     data = [];
-    name="venues"
-    private _items: ObservableArray<TokenModel>;
-    private _filteredItems: ObservableArray<TokenModel>;
+    // name="venues" 
+     _items: Array<Venue>;//ObservableArray<TokenModel>;
+     _filteredItems: Array<Venue> ;//ObservableArray<TokenModel> = null;
     public showingLongListPicker: any = false;
-    public venues = ["Gymfinity", "Jungle Mania", "Crazy Kids", "Mad House", "Loddon Valley Leasiure center", "Place6", "Place7","Place8", "Place9","Place10", "Place12",];
+    venues: Array<Venue>;
+    // public venues = ["Gymfinity", "Jungle Mania", "Crazy Kids", "Mad House", "Loddon Valley Leasiure center", "Place6", "Place7","Place8", "Place9","Place10", "Place12",];
 
-    constructor() { 
+    constructor(private _venueService: VenueService) { 
 
-        this.initDataItems();
+        // this.initDataItems();
     }
     
 
     ngOnInit(): void {
         // Init your component properties here.
         console.log("initilize Browsing*******")
+        this.venues = this._venueService.getVenues();
+        console.log("initilize Browsing*******"+this.venues);
     
     }
 
-    // public onSelectedIndexChanged(args: EventData) {
-    //     const picker = <ListPicker>args.object;
-    //     console.log(`index: ${picker.selectedIndex}; item" ${this.venues[picker.selectedIndex]}`);
-    //     this.showingLongListPicker = false;
-    // }
   
     onTapDate(args: EventData) {
         let button = args.object as Button;
@@ -82,10 +83,7 @@ export class BrowseComponent implements OnInit {
             this.showTimePicker = false
             // alert("showTimePicker " + this.showTimePicker + " showTimePicker!");
         }
-        // alert("Tapped " + this.counter + " times!");
         
-       
-        // << (hide)
     }
 
 
@@ -97,14 +95,8 @@ export class BrowseComponent implements OnInit {
         console.log(`Searching for ${searchBar.text}`);
     }
 
-    venueList_arr: Array<String>;
-    
-    // onTextChanged(args) {
-    //     const searchBar = args.object as SearchBar;
-    //     console.log(`Input changed! New value: ${searchBar.text}`);
-    // }
-  
     onTextChanged(args) {
+    
         
         const searchBar = args.object as SearchBar;
         console.log(`Input changed! New value: ${searchBar.text}`);
@@ -114,22 +106,24 @@ export class BrowseComponent implements OnInit {
             console.log(` its undefined`);
         }
         else{
-            console.log(`in Function onTextChanged`+searchBar.text);
+            
             const searchValue = searchBar.text.toLowerCase();
-            console.log(`after lower case`+searchValue);
             let arrayItems=this.venues; //Set Main venues Arraylist data to Local Arraylist for Searching
-            console.log(`after array case`+arrayItems);
-            this.venueList_arr=new Array();
+            
             if (searchValue !== "") {
-                this._filteredItems = new ObservableArray<TokenModel>();
-                for (let i = 0; i < arrayItems.length; i++) {
-                    if (arrayItems[i].toLowerCase().indexOf(searchValue) !== -1) {
-                        console.log(`after array item::`+arrayItems[i]);
-                        this.venueList_arr.push(arrayItems[i]);
-                        this._filteredItems.push(new TokenModel(arrayItems[i], undefined));
+                this._filteredItems = new Array<Venue>();
+                arrayItems.forEach( (element) => {
+                    if (element.name.toLowerCase().indexOf(searchValue) !== -1) {
+                        console.log(`after array item::`+element.name);
+                        // this.venueList_arr.push(venue);
+                        this._filteredItems.push(element);
                     }
-                }
+                });
+                
                 this._items = this._filteredItems;
+                this.dataItems;
+                console.log(`now the list of items : `+this._items);
+                this.isBeingFiltered = true;
             }
             console.log("SearchBar text changed! New value: " + searchBar.text);
         }
@@ -141,29 +135,38 @@ export class BrowseComponent implements OnInit {
         const searchBar = args.object as SearchBar;
         console.log(`Clear event raised`);
         this.initDataItems();
+        this.isBeingFiltered = false;
     }
     
-    get dataItems(): ObservableArray<TokenModel> {
+    get dataItems(): Array<Venue> {
         // console.log(`get Data items`);
         // console.log(`item: `+this._items)
+        if(!this.isBeingFiltered){
+            this._items = this.venues;
+        }
+        
         return this._items;
     }
 
     private initDataItems() {
+        
         console.log(`in Function initDataItems`);
-        this._items = new ObservableArray<TokenModel>();
+        this._items = new Array<Venue>();
     
         for (let i = 0; i < this.venues.length; i++) {
-            console.log(`in Function country`+this.venues[i]);
-            console.log(`Count for I :: `+i);
-            this._items.push(new TokenModel(this.venues[i], undefined));
+            // console.log(`in Function country`+this.venues[i]);
+            // console.log(`Count for I :: `+i);
+            this._items.push(this.venues[i]);
         }
         console.log(`out Function initDataItems`+this._items);
     }
    showVenues(){
-       console.log(`show venues`);
+
        this.showingLongListPicker =true;
-       this.initDataItems();
+       console.log(`show venues`);
+       console.log(` being filter `+this.isBeingFiltered);
+       this.showingLongListPicker =true;
+    //    this.initDataItems();
        this.showVenuesCount++;
         if( this.showVenuesCount % 2 == 0)
         {
@@ -178,10 +181,10 @@ export class BrowseComponent implements OnInit {
    }
    searchTerm:string;
    selectVenue(args){
-       console.log(`country selected :`+ args.index)
-       console.log(`Index: ${args.index}; View: ${args.view} ; Item: ${this.venues[args.index]}`);
-       this.showingLongListPicker = false;
-       this.searchTerm = this.venues[args.index]; 
+        //    console.log(`country selected :`+ args.index)
+        console.log(`Index: ${args.name}; View: ${args.view} ; Item: ${this._items[args.index].name}`);
+        this.showingLongListPicker = false;
+        this.searchTerm = this._items[args.index].name;       
    }
 
     

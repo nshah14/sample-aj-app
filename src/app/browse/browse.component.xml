@@ -13,32 +13,24 @@
                 <StackLayout class="boring" row="1" col="0" backgroundColor="lightgray" orientation="horizontal" height="100%"  >
                     <Label class="label" text="Party Location" height="100%" ></Label>
             
-                        <SearchBar hint="Enter party term here"
+                        <SearchBar class="searchbar" hint="Enter party term here"
                                 [text]="searchTerm" (textChange)="onTextChanged($event)" 
                                 (clear)="onClear($event)" (submit)="onSubmit($event)"  (tap)="showVenues()"  > 
                         </SearchBar>
                             
                 </StackLayout>
-                <StackLayout class="boring" row="2" col="0" backgroundColor="lightgray" orientation="horizontal" height="100%">
-                 <listView [visibility]="showingLongListPicker? 'visible':'collapsed'" [items]="dataItems" (itemTap)="selectVenue($event)" backgroundColor="white" >
-                        <!-- <SuggestionView  tkAutoCompleteSuggestionView>
-                            <ng-template tkSuggestionItemTemplate let-item="item" >
+                <StackLayout class="boring" row="2" col="0" backgroundColor="lightgray" orientation="horizontal" height="50%">
+                 
+                 <ListView [visibility]="showingLongListPicker? 'visible':'collapsed'" [items]="dataItems" (itemTap)="selectVenue($event)" backgroundColor="white" >
+                        
+                            <ng-template  let-item="item" >
                                 <StackLayout  orientation="vertical" >
-                                    <Label [text]="item.text"></Label>
-                                </StackLayout>
-                            </ng-template>
-                        </SuggestionView> -->
-                             <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
-                                <StackLayout>
-                                    <ScrollView height="150" >
-                                      <!-- <StackLayout  orientation="vertical" > -->
-                                    <Label [text]="item.text" text="Name of Child">anything</Label>
-                                <!-- <           </StackLayout> -->
-                                    </ScrollView>
+                                    <Label [text]="item.name" class="list-group-item"></Label>
                                 </StackLayout>
                             </ng-template>
                         
-                    </listView>
+                    </ListView>
+                
                 </StackLayout>
                 <StackLayout class="boring" row="3" col="0" backgroundColor="lightgray" orientation="horizontal" height="100%"  >
                     <Label class="label" text="Party Theme"  height="100%"></Label>
